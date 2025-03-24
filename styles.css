@@ -17,13 +17,17 @@ body {
     height: 150px;
     margin: 20px auto;
     cursor: pointer;
-    animation: spin 4s linear infinite;
 }
 
 .vinyl img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+/* Khi thêm class .spinning, đĩa nhạc sẽ quay */
+.spinning {
+    animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
