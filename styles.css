@@ -5,6 +5,7 @@ body {
     height: 100vh;
     background: linear-gradient(to right, #ff9a9e, #fad0c4);
     font-family: Arial, sans-serif;
+    flex-direction: column;
 }
 
 .container {
@@ -34,4 +35,5 @@ body {
     font-size: 18px;
     color: #333;
     display: none;
+    margin-top: 20px;
 }
