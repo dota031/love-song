@@ -31,6 +31,12 @@ body {
     to { transform: rotate(360deg); }
 }
 
+.click-message {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
 .message {
     font-size: 18px;
     color: #333;
