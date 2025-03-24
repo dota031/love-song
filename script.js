@@ -1,6 +1,7 @@
 window.onload = function() {
     const audio = document.getElementById("audio");
 
+    // Kích hoạt phát nhạc khi người dùng chạm vào màn hình trên iOS
     function enableAudio() {
         audio.muted = false;
         audio.play();
@@ -11,17 +12,21 @@ window.onload = function() {
     document.body.addEventListener("touchstart", enableAudio);
     document.body.addEventListener("click", enableAudio);
 
-    audio.play().catch(error => {
+    // Tự động phát nhạc nếu trình duyệt cho phép
+    audio.play().then(() => {
+        console.log("Nhạc tự động phát thành công.");
+    }).catch(error => {
         console.log("Trình duyệt chặn autoplay, chờ người dùng tương tác...");
     });
 };
 
+// Xử lý sự kiện khi nhấn vào đĩa nhạc
 const vinyl = document.getElementById("vinyl");
 const message = document.getElementById("message");
 const clickMessage = document.getElementById("click-message");
 
 vinyl.addEventListener("click", function() {
-    message.style.display = "block";
-    message.innerHTML = "Chúc bạn iu ngày mới zui zẻ nha! Giờ ngủ một giấc dậy là chắc hết khó chịu rùi nhỉ. Những lúc em như này anh chẳng biết phải làm gì để an ủi em. Thui thì mong món quà nhỏ này sẽ làm em cảm thấy vui vẻ iu đời hơn. Dù có chuyện gì xảy ra anh cũng chỉ muốn em biết rằng anh lun iu thương và ủng hộ em ❤️";
+    message.style.display = "block"; // Hiện thư tình
+    message.innerHTML = "Gửi em, tình yêu của anh... ❤️";
     clickMessage.style.display = "none"; // Ẩn dòng chữ hướng dẫn
 });
