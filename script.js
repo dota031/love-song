@@ -20,7 +20,7 @@ vinyl.addEventListener("click", function() {
     audio.play().then(() => {
         vinyl.classList.add("spinning"); // Bắt đầu quay đĩa
         message.style.display = "block"; // Hiện thư tình
-        message.innerHTML = "Gửi em, tình yêu của anh... ❤️";
+        message.innerHTML = "Chúc bạn iu ngày mới zui zẻ nha! Giờ ngủ một giấc dậy là chắc hết khó chịu rùi nhỉ. Những lúc em như này anh chẳng biết phải làm gì để an ủi em. Thui thì mong món quà nhỏ này sẽ làm em cảm thấy vui vẻ iu đời hơn. Dù có chuyện gì xảy ra anh cũng chỉ muốn em biết rằng anh lun iu thương và ủng hộ em ❤️";
         clickMessage.style.display = "none"; // Ẩn dòng chữ hướng dẫn
     }).catch(error => {
         console.log("Lỗi khi phát nhạc:", error);
